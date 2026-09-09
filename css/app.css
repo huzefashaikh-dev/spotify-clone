@@ -1,0 +1,375 @@
+:root {
+    --border: 1px solid white;
+    --shade1: #252525;
+    --shade2: #1b1b1b;
+    --shade3: #343434;
+    --shade4: #656363;
+    --li-hover: linear-gradient(145deg, #4e4d4d, #2a2626, #433f3f, #262121);
+    --gradient: linear-gradient(145deg, #1d1d1d, #000000, #0b0b0b);
+    --card-hover: linear-gradient(145deg, #222222, #1b1b1b, #282828, #1d1c1c);
+    --opacity : opacity(0);
+    --bottom: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease-in;
+}
+
+/* Utility Classes */
+.invert {
+    filter: invert(1);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Body CSS */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+
+/* Nav CSS */
+.nav {
+    width: 98vw;
+    height: 57px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hamburger{
+    display: none;
+}
+
+.img {
+    gap: 20px;
+    margin: 0 20px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--shade2)
+}
+
+.home:hover {
+    background-color: var(--shade1);
+    transform: scale(1.02);
+}
+
+.home img {
+    width: 65%;
+}
+
+.buttons {
+    gap: 10px;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    color: rgb(150, 147, 147);
+    border: none;
+    border-radius: 35px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sign-in:hover {
+    background-color: var(--shade1);
+    color: white;
+    font-size: 14.5px;
+}
+
+.log-in {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+.log-in:hover {
+    transform: scale(1.05);
+    font-size: 14.5px;
+}
+
+.main {
+    display: flex;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+/* Left Section*/
+
+.left {
+    height: calc(100vh - 70px);
+    width: 25vw;
+    background-color: var(--shade2);
+    border-radius: 10px;
+}
+
+.top {
+    height: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.top img {
+    height: 30px;
+}
+
+.top h2 {
+    font-size: 18px;
+}
+
+.songs {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+}
+
+.song{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+    flex: 1;
+    
+}
+
+.songs ul li {
+    height: 50px;
+    width: 95%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 0 12px;
+    margin: 10px auto;
+    background-color: var(--shade3);
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.songs ul li p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    width: 100%;
+}
+
+.songs ul li:hover{
+    background: var(--li-hover);
+    transform: scale(1.03);
+} 
+
+/* Right Section  */
+.right {
+    height: calc(100vh - 70px);
+    width: 72vw;
+    background: var(--gradient);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.right>h2 {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.playlist {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin: 20px;
+}
+
+.card {
+    width: 190px;
+    height: 255px;
+    border-radius: 10px;
+    background-color: transparent;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+
+.card-img .cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 5px;
+}
+
+.card-img .btn{
+    width: 50px;
+    position: absolute;
+    bottom: var(--bottom);
+    right: 5px;
+    filter: var(--opacity);
+    ;
+}
+
+.card h2 {
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+    color: rgb(169, 165, 165);
+}
+
+.card:hover {
+    background: var(--card-hover);
+    transform: scale(1.02);
+    --opacity : opacity(1);
+    --bottom: 5px;
+}
+
+/* Playbar Styles */
+.playbar{
+    color: #ebe4cb;
+    padding: 10px;
+    width: 60vw;
+    height: 75px;
+    margin: auto;
+    background-color: var(--shade2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.upperbar{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songInfo{
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.songInfo span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-text 15s linear infinite;
+}
+
+
+@keyframes scroll-text {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.songButtons{
+    width: 16%;
+    display: flex;
+    justify-content: space-between;
+}
+.TimeVolume{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.volume{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.volume-range {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  accent-color: #ebe4cb;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.volume-range.active {
+  width: 80px; 
+  height: 6px;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.lowerbar .seekbar{
+    width: 58vw;
+    height: 6px;
+    background: #ebe4cb;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.seekbar .thumb{
+    height: 13px;
+    width: 13px;
+    background-color: rgb(130, 181, 126);
+    border-radius: 10px;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+

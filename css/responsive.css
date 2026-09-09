@@ -1,0 +1,231 @@
+@media screen and (max-width: 1150px) {
+    .nav {
+        height: 45px;
+    }
+
+    .nav-logos {
+        width: 43px;
+    }
+
+    .button {
+        width: 85px;
+        height: 43px;
+        font-size: 13px;
+    }
+
+    .sign-in:hover,
+    .log-in:hover {
+        font-size: 13.5px;
+    }
+
+    .top {
+
+        padding: 15px 20px;
+    }
+
+    .left {
+        height: calc(100vh - 65px);
+        width: 30vw;
+    }
+
+    .song {
+        gap: 10px;
+    }
+
+    .songs ul li p {
+        font-size: 13px;
+    }
+
+    .songs ul li {
+        gap: 13px;
+    }
+
+    .songs ul li img {
+        width: 20px;
+    }
+
+    .songs {
+        overflow-y: auto;
+    }
+
+    .card {
+        width: 150px;
+        height: 220px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 12px;
+        color: rgb(169, 165, 165);
+    }
+
+    .right>h2 {
+        font-size: 24px;
+        margin: 14px;
+    }
+
+    .playlist {
+        margin: 10px;
+    }
+
+    .songButtons img,
+    .volume img {
+        width: 20px;
+    }
+
+    .songTime {
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .left {
+        width: 30vw;
+    }
+
+    .card {
+        width: 140px;
+        height: 210px;
+    }
+
+    .card h2 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .nav-logos {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .main {
+        position: relative;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .hamburger img {
+        width: 28px;
+    }
+
+    .left {
+        width: 50%;
+        position: absolute;
+        z-index: 1;
+        left: -100%;
+    }
+
+    .left.open {
+        left: 0;
+    }
+
+    .playbar {
+        width: 80vw;
+    }
+
+    .lowerbar .seekbar {
+        width: 76vw;
+    }
+
+    .button {
+        width: 70px;
+        height: 37px;
+        font-size: 12.5px;
+    }
+
+    .sign-in:hover,
+    .log-in:hover {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .left{
+        width: 70vw;
+    }
+
+    .songs ul li{
+        height: 40px;
+    }
+
+    .songs ul li img {
+        width: 16px;
+    }
+.playbar {
+        width: 95vw;
+            padding: 10px 5px 0 5px;
+    }
+
+    .lowerbar .seekbar {
+        width: 92vw;
+    }
+
+.songInfo{
+    width: 38%;
+    font-size: 11px;
+}
+
+.songButtons{
+    width: 16%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.songButtons img, .volume img{
+    width: 13px;
+}
+
+.TimeVolume{
+    width: 38%;
+    gap: 10px;
+}
+
+.songTime{
+    font-size: 10px;
+}
+
+.volume{
+    gap: 5px;
+}
+
+.lowerbar .seekbar{
+    width: 92vw;
+    height: 4px;
+}
+
+.seekbar .thumb{
+    height: 10px;
+    width: 10px;
+    top: -3px;
+
+}
+
+
+
+.volume-range.active {
+  width: 40px; 
+  height: 4px;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+}

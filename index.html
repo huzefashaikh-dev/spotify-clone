@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <div class="nav">
+    <div class="img flex">
+      <div class="hamburger">
+        <img class="invert cursor" src="./assets/svg/hamburger.svg" alt="">
+      </div>
+      <div class="nav-logos logo">
+        <img class="invert cursor" src="./assets/svg/logo.svg" alt="" />
+      </div>
+      <div class="nav-logos home">
+        <img class="invert cursor" src="./assets/svg/home.svg" alt="" />
+      </div>
+    </div>
+    <div class="buttons flex">
+      <button class="button cursor sign-in">Sign up</button>
+      <button class="button cursor log-in">Log in</button>
+    </div>
+  </div>
+<!-- Main container -->
+  <div class="main">
+    <!-- Left Section -->
+    <div class="left">
+      <div class="top">
+        <img class="invert" src="./assets/svg/playlist.svg" alt="" />
+        <h2>Your Library</h2>
+      </div>
+      <div class="songs">
+        <ul></ul>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+      <h2>Spotify Playlists</h2>
+
+      <!-- Playlists -->
+      <div class="playlist"></div>
+      <div class="playbar">
+        <div class="upperbar">
+          <div class="songInfo"><span></span></div>
+          <div class="songButtons">
+            <img class="invert prev cursor" src="./assets/svg/prevsong.svg" alt="">
+            <img class="invert play cursor" src="./assets/svg/play.svg" alt="">
+            <img class="invert next cursor" src="./assets/svg/nextsong.svg" alt="">
+          </div>
+          <div class="TimeVolume">
+            <div class="volume">
+              <img class="invert cursor" src="./assets/svg/volume.svg" alt="">
+              <input type="range" class="volume-range" value="${currentSong.volume}">
+            </div>
+            <div class="songTime"></div>
+          </div>
+        </div>
+        <div class="lowerbar">
+          <div class="seekbar">
+            <div class="thumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
